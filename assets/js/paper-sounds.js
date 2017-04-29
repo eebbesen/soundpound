@@ -1,7 +1,40 @@
 var point, circle;
 var circles = [];
+var sounds = [
+  'bubbles',
+  'clay',
+  'confetti',
+  'corona',
+  'dotted-spiral',
+  'flash-1',
+  'flash-2',
+  'flash-3',
+  'glimmer',
+  'moon',
+  'pinwheel',
+  'piston-1',
+  'piston-2',
+  'piston-3',
+  'prism-1',
+  'prism-2',
+  'prism-3',
+  'splits',
+  'squiggle',
+  'strike',
+  'suspension',
+  'timer',
+  'ufo',
+  'veil',
+  'wipe',
+  'zig-zag'
+]
+
+var sound = new Howl({
+  src: ['sounds/bubbles.mp3']
+});
 
 function onKeyDown(event){
+  getSound().play();
   setPoint();
   setCircle();
   // showKey(event.key);
@@ -16,6 +49,13 @@ function setCircle(){
   circle.fillColor = 'orange';
   circle.fillColor.hue += getRandom(360);
   circles.push(circle);
+}
+
+function getSound(){
+  var num  = Math.floor(getRandom(sounds.length));
+  var sound = sounds[num];
+  var str = 'sounds/' + sound + '.mp3';
+  return new Howl({src: [str]});
 }
 
 function getRandom(seed){
@@ -35,7 +75,6 @@ function onFrame(event){
     c.fillColor.hue += 1;
     c.scale(.96);
   }
-
 }
 
 function showKey(key){
