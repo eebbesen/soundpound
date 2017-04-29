@@ -12,6 +12,7 @@ var sounds = [
   'glimmer',
   'moon',
   'pinwheel',
+
   'piston-1',
   'piston-2',
   'piston-3',
@@ -22,6 +23,7 @@ var sounds = [
   'squiggle',
   'strike',
   'suspension',
+
   'timer',
   'ufo',
   'veil',
@@ -34,10 +36,9 @@ var sound = new Howl({
 });
 
 function onKeyDown(event){
-  getSound().play();
+  getSound(event.key).play();
   setPoint();
   setCircle();
-  // showKey(event.key);
 }
 
 function setPoint(){
@@ -51,8 +52,8 @@ function setCircle(){
   circles.push(circle);
 }
 
-function getSound(){
-  var num  = Math.floor(getRandom(sounds.length));
+function getSound(key){
+  var num  = codeForKey(key);
   var sound = sounds[num];
   var str = 'sounds/' + sound + '.mp3';
   return new Howl({src: [str]});
@@ -77,6 +78,16 @@ function onFrame(event){
   }
 }
 
+// maps alphabetic keys
+function codeForKey(key) {
+  var res = key.match(/[a-z]/);
+  if (res !== null) {
+   return key.charCodeAt() - 97;
+  }
+  return Math.floor(getRandom(sounds.length));
+}
+
+// not used
 function showKey(key){
   new PointText({
     point: point,
