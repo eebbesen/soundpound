@@ -28,9 +28,14 @@ function getRandom(seed){
 
 function onFrame(event){
   for(var i = 0; i < circles.length; i++){
-    circles[i].fillColor.hue += 1;
-    circles[i] .scale(.9);
+    var c = circles[i];
+    if (c.area < 1){
+      circles.splice(i, 1);
+    }
+    c.fillColor.hue += 1;
+    c.scale(.96);
   }
+
 }
 
 function showKey(key){
