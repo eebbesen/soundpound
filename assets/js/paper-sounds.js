@@ -1,5 +1,5 @@
-var point;
-var circle;
+var point, circle;
+var circles = [];
 
 function onKeyDown(event){
   setPoint();
@@ -14,6 +14,7 @@ function setPoint(){
 function setCircle(){
   circle = new Path.Circle(point, getRandom(80));
   circle.fillColor = 'orange';
+  circles.push(circle);
 }
 
 function getRandom(seed){
@@ -25,8 +26,9 @@ function getRandom(seed){
 }
 
 function onFrame(event){
-  if (circle && circle != null) {
-    circle.fillColor.hue += 1;
+  for(var i = 0; i < circles.length; i++){
+    circles[i].fillColor.hue += 1;
+    circles[i] .scale(.9);
   }
 }
 
