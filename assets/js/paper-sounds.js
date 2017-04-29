@@ -6,7 +6,7 @@ function onKeyDown(event){
 }
 
 function getPoint(){
-  return new Point(getRandom(1500), getRandom(500));
+  return new Point(view.size.width, view.size.height) * Point.random();
 }
 
 function getCircle(point){
