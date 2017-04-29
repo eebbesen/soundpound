@@ -4,7 +4,7 @@ var circles = [];
 function onKeyDown(event){
   setPoint();
   setCircle();
-  showKey(event.key);
+  // showKey(event.key);
 }
 
 function setPoint(){
@@ -14,6 +14,7 @@ function setPoint(){
 function setCircle(){
   circle = new Path.Circle(point, getRandom(80));
   circle.fillColor = 'orange';
+  circle.fillColor.hue += getRandom(360);
   circles.push(circle);
 }
 
@@ -33,7 +34,6 @@ function onFrame(event){
 }
 
 function showKey(key){
-  // alert(point.x);
   new PointText({
     point: point,
     content: key,
