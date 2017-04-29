@@ -1,16 +1,19 @@
+var point;
+var circle;
 
 function onKeyDown(event){
-  var p = getPoint();
-  getCircle(p);
-  showKey(event.key, p);
+  setPoint();
+  setCircle();
+  showKey(event.key);
 }
 
-function getPoint(){
-  return new Point(view.size.width, view.size.height) * Point.random();
+function setPoint(){
+  point = new Point(view.size.width, view.size.height) * Point.random();
 }
 
-function getCircle(point){
-  new Path.Circle(point, getRandom(60)).fillColor = 'orange';
+function setCircle(){
+  circle = new Path.Circle(point, getRandom(80));
+  circle.fillColor = 'orange';
 }
 
 function getRandom(seed){
@@ -21,7 +24,13 @@ function getRandom(seed){
   return Math.random() * seed;
 }
 
-function showKey(key, point){
+function onFrame(event){
+  if (circle && circle != null) {
+    circle.fillColor.hue += 1;
+  }
+}
+
+function showKey(key){
   // alert(point.x);
   new PointText({
     point: point,
