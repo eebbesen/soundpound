@@ -1,0 +1,11 @@
+{
+  "name": "soundpound",
+  "version": "0.1.0",
+  "description": "keyboard-driven sound and light show",
+  "scripts": {
+    "start": "harp server --port $PORT"
+  },
+  "dependencies": {
+    "harp": "*"
+  }
+}
