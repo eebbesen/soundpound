@@ -1,5 +1,8 @@
 {
   "name": "soundpound",
+  "engines":{
+    "node":"8.1.4"
+  },
   "version": "0.1.0",
   "description": "keyboard-driven sound and light show",
   "scripts": {
