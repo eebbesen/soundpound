@@ -14,6 +14,7 @@ If you want to serve another directory, modify the symlink appropriately.
 
 ## Serve on Heroku
 Use the heroku/nodejs buildback to serve this project
+
 1. Add heroku/nodejs as the buildpack in Heroku's Personal apps -> Settings page
 1. Create a package.json file in the project root
 1. Push to Heroku master
