@@ -1,14 +1,18 @@
 {
   "name": "soundpound",
   "engines": {
-    "node": "8.1.4"
+    "node": ">=12.13.1"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "keyboard-driven sound and light show",
   "scripts": {
     "start": "harp server --port $PORT"
   },
   "dependencies": {
-    "harp": "*"
+    "bl": ">=2.2.1",
+    "clean-css": ">=4.1.11",
+    "cli": ">=1.0.0",
+    "harp": "*",
+    "yargs-parser": ">=13.1.2"
   }
 }
