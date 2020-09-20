@@ -9,10 +9,10 @@
     "start": "harp server --port $PORT"
   },
   "dependencies": {
-    "bl": ">=2.2.1",
-    "clean-css": ">=4.1.11",
-    "cli": ">=1.0.0",
+    "bl": ">4.0.0",
+    "clean-css": ">=4.2.3",
+    "cli": ">=1.0.1",
     "harp": "*",
-    "yargs-parser": ">=13.1.2"
+    "yargs-parser": ">=20.1.0"
   }
 }
