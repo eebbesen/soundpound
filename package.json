@@ -4,7 +4,7 @@
     "node": "=12.13.1",
     "npm": "=6.14.5"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "keyboard-driven sound and light show",
   "scripts": {
     "start": "harp server --port $PORT"
