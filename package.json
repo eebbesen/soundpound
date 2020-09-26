@@ -1,19 +1,15 @@
 {
   "name": "soundpound",
-  "engines": {
-    "node": "=12.13.1",
-    "npm": "=6.14.5"
-  },
-  "version": "0.1.2",
-  "description": "keyboard-driven sound and light show",
+  "version": "0.2.0",
   "scripts": {
-    "start": "harp server --port $PORT"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "bl": ">4.0.0",
-    "clean-css": ">=4.2.3",
-    "cli": ">=1.0.1",
-    "harp": "*",
-    "yargs-parser": ">=20.1.0"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }
