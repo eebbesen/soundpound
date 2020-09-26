@@ -1,16 +1,8 @@
 # Soundpound
 This is my implementation of a project I created while taking [the Web Developer Bootcamp Udemy course](https://www.udemy.com/the-web-developer-bootcamp).  This exercise is covered in chapter 19.
 
-## Use pow to serve static files
-Having trouble with Chrome blocking content when reading directly from the file, but using Pow gets around this.
-
-    cd ~/.pow
-    mkdir soundpound
-    ln -s /Users/username/projects/soundpound soundpound/public
-
-Then it is available at http://soundpound.dev
-
-If you want to serve another directory, modify the symlink appropriately.
+## Run locally
+    npm start
 
 ## Serve on Heroku
 Use the heroku/nodejs buildback to serve this project
