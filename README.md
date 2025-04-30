@@ -4,6 +4,8 @@ This is my implementation of a project I created while taking [the Web Developer
 ## Run locally
     npm start
 
+http://localhost:3000
+
 ## Serve on Heroku
 Use the heroku/nodejs buildback to serve this project
 
